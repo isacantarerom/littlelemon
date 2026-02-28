@@ -3,3 +3,8 @@ from .models import Booking, Menu
 
 admin.site.register(Booking)
 admin.site.register(Menu)
+
+
+#admin
+#admin@littlelemon.com
+#admin123
