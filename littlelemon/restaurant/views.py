@@ -6,6 +6,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import generics
 from .models import Menu , Booking
 from .serializers import MenuSerializer , UserSerializer, BookingSerializer
+# from rest_framework.decorators import api_view, permission_classes
+# from rest_framework.permissions import IsAuthenticated
+
 
 def index(request):
     return render(request, 'index.html', {})
@@ -25,6 +28,8 @@ class UserViewSet(viewsets.ModelViewSet):
    serializer_class = UserSerializer
    permission_classes = [IsAuthenticated] 
 
+
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+    permission_classes = [IsAuthenticated] 
